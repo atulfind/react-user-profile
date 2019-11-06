@@ -1,0 +1,241 @@
+/* global styles used across the app */
+@import '../sass/variables';
+/* custom reset - in addition to Eric Meyer's reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  box-sizing: border-box;
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* reset input, select, button styles */
+input,
+select,
+button {
+  border-radius: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 0;
+}
+
+/* reset search input styles */
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
+/* reset select/dropdown styles */
+select {
+  -webkit-appearance: none;
+}
+
+/* global outline reset */
+button:focus,
+button:active {
+  outline: 0;
+}
+
+a:focus {
+  outline: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  font-family: 'Nunito Sans';
+  background: #fff;
+}
+
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child + html .clearfix { zoom: 1; } /* IE7 */
+
+.img-round{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// opacity 0.5
+.caption{
+  color: $primary-op5;
+}
+
+
+// about 20px
+h4{
+  @include font-size(19px, 21px);
+  font-weight: 600;
+}
+
+h6{
+  @include font-size(10px, 12px);
+  font-weight: 600;
+}
+
+.img-wrap{
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  img{
+    width: 100%;
+    height: 100%;
+  } 
+  .circle{
+    border-radius: 50%; 
+  }
+  .rect{
+    border-radius: 8px;
+  }
+}
+
+
+.toggle{
+  display: none;
+  position: absolute;
+}
+
+.res{
+  display: none !important;
+  @include tablet{
+    display: block !important;
+  }
+}
+
+.right{
+  float: right;
+}
+
+.error{
+  color: $danger;
+  font-weight: 600;
+}
+
+.not-res{
+  @include tablet{
+    display: none !important;
+  }
+}
+
+.required{
+  color: $danger;
+  font-weight: 700;
+}
+
+
+.icon{
+  vertical-align: middle;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 3px;
+}
+
+.icon-travel{
+  width: 13px;
+  height: 13px;
+  background-image: url($img-path+'icon_bell.png');
+}

@@ -1,0 +1,32 @@
+@import './sass/variables';
+@import './sass/mixins';
+ 
+.container{
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+  .link{
+    color: #339af0;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .list-items{
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+    .item{
+      padding: 12px 20px;
+      border-top: 1px solid $border-outline;
+      &:last-child{
+       padding-bottom: 0; 
+      }
+    }
+  }
+  .card{
+    padding: 20px;
+    box-shadow: $shadow;
+    border-radius: 8px;
+    margin-bottom: 30px;
+ 
+  }
+}

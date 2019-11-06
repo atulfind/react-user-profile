@@ -1,0 +1,63 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.right-bar{
+  width: 25%;
+  .card{
+    h4{
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .list-items{
+      .item{
+        display: flex;
+        .icon{
+          width: 18px;
+          height: 18px;
+        }
+        .title{
+          font-size: 15px;
+          font-weight: 600;
+          display: inline-block;
+          vertical-align: middle;
+          color: $primary-op5;
+        }
+      }
+    }
+    .img-wrap{
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      margin-right: 7px;
+    }
+    .details{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .heading{
+        font-size: 15px;
+        color: $fc-primary;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .sub-heading{
+        font-size: 13px;
+        color: $primary-op5;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .caption{
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
